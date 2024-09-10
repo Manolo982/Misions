@@ -11,7 +11,7 @@ public class MissionCommand implements CommandExecutor {
 
     private MissionReward plugin;
 
-    public MissionCommand(MissionReward plugin){
+    public MissionCommand(MissionReward plugin) {
         this.plugin = plugin;
     }
 

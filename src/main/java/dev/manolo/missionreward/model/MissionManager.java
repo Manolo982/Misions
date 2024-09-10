@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Getter
 public class MissionManager {
-    
+
     private Map<UUID, String> misions = new HashMap<>();
 
     private Mission mission;
@@ -28,10 +28,9 @@ public class MissionManager {
         this.getMisions().remove(uuid);
     }
 
-
     public boolean contains(UUID uuid) {
-        if(uuid != null){
-           return this.misions.containsKey(uuid);
+        if (uuid != null) {
+            return this.misions.containsKey(uuid);
         }
         return false;
     }

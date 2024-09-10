@@ -24,21 +24,18 @@ public final class MissionReward extends JavaPlugin {
     private MissionMenu menu;
 
     // private FileUtils config;
-
     @Override
     public void onEnable() {
         instance = this;
 
         //      ! Files !       //
         // this.loadConfigs();
-
         this.missionManager = new MissionManager();
         this.menu = new MissionMenu(this);
         this.challenge = new Challenge(this);
 
-     //        ? Commands  ?     //
+        //        ? Commands  ?     //
         this.loadCmds();
-
 
     }
 
@@ -54,6 +51,4 @@ public final class MissionReward extends JavaPlugin {
 //    private void loadConfigs() {
 //        config = new FileUtils(this,"config.yml");
 //    }
-
-
 }

@@ -9,10 +9,8 @@ public class CC {
         return ChatColor.translateAlternateColorCodes('&', msg);
     }
 
-    public static void log(String msg){
+    public static void log(String msg) {
         Bukkit.getConsoleSender().sendMessage(translate(msg));
     }
-    
-
 
 }
