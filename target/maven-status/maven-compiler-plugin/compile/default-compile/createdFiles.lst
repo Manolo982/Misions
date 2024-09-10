@@ -1,0 +1,9 @@
+dev/manolo/missionreward/MissionReward.class
+dev/manolo/missionreward/challenge/chs/DirtChallenge.class
+dev/manolo/missionreward/utils/CC.class
+dev/manolo/missionreward/model/Mission.class
+dev/manolo/missionreward/menu/MissionMenu.class
+dev/manolo/missionreward/commands/MissionCommand.class
+dev/manolo/missionreward/model/MissionManager.class
+dev/manolo/missionreward/utils/FileUtils.class
+dev/manolo/missionreward/challenge/Challenge.class

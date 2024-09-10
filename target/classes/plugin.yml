@@ -1,0 +1,7 @@
+name: MissionReward
+version: '1.0-SNAPSHOT'
+main: dev.manolo.missionreward.MissionReward
+description: Plugin missions for the game Mission Reward
+
+commands:
+  mision:
