@@ -8,6 +8,7 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
@@ -26,7 +27,7 @@ public class DirtChallenge implements Listener {
         this.plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onBreakBlock(BlockBreakEvent event) {
         Player player = event.getPlayer();
 
@@ -34,7 +35,7 @@ public class DirtChallenge implements Listener {
             return;
         }
 
-        if (this.plugin.getMissionManager().contains(player.getUniqueId())) {
+        if (this.plugin.getMissionManager().containsValue("dirtchall")) {
             if (event.getBlock().getType().equals(Material.DIRT) || event.getBlock().getType().equals(Material.GRASS)) {
                 if (stage == 1) {
                     this.blockBreaks++;
@@ -45,6 +46,7 @@ public class DirtChallenge implements Listener {
                             player.sendMessage(CC.translate("&6DirtMission: &7you has broken &e1 STACK &7of dirt blocks."));
                         } else if (this.stacks == 2) {
                             MissionManager.getInstance().remove(player.getUniqueId());
+                            player.sendMessage(CC.translate("&6DirtMission: &7you has broken &e2 STACK &7of dirt blocks."));
                             player.sendMessage(CC.translate("&aCongrulations!!! you has passed challenge"));
                             this.stage++;
                             this.stacks = 0;
