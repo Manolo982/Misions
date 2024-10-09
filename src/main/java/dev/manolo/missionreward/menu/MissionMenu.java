@@ -36,7 +36,7 @@ public class MissionMenu implements Listener {
 
     public void mainInv(Player player) {
         this.inventory.setItem(0, this.dirtMission());
-        this.inventory.setItem(1, this.zombieChall());
+        this.inventory.setItem(1, this.craftChall());
         this.inventory.setItem(26, this.back());
         
         player.openInventory(this.inventory);
@@ -54,10 +54,10 @@ public class MissionMenu implements Listener {
         return stack;
     }
     
-    private ItemStack zombieChall() {
+    private ItemStack craftChall() {
         ItemStack stack = new ItemStack(Material.GOLD_INGOT, 1);
         ItemMeta meta = stack.getItemMeta();
-        meta.setDisplayName(CC.translate("&6Zombie Challenge"));
+        meta.setDisplayName(CC.translate("&6Crafting Challenge"));
         meta.setLore(Arrays.asList(CC.translate("&7Right-Click for start mission"),
                 CC.translate("&7Left-Click for start mission"),
                 CC.translate("&eYou had rewards for complete this mission")));
@@ -104,9 +104,9 @@ public class MissionMenu implements Listener {
                         player.sendMessage(CC.translate("&7You have started the dirt mission."));
                         player.sendMessage(mission.getDescription());
                         player.closeInventory();
-                    } else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(CC.translate("&6Zombie Challenge"))) {
+                    } else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(CC.translate("&6Crafting Challenge"))) {
                         mission = new Mission("zombiechall");
-                        mission.setDescription(CC.translate("&aMata a 8 zombies"));
+                        mission.setDescription(CC.translate("&aCraftea los items que te aparezcan"));
 
                         this.plugin.getMissionManager().add(player.getUniqueId(), mission.getName());
 

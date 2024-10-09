@@ -1,7 +1,8 @@
 dev\manolo\missionreward\model\Mission.class
 dev\manolo\missionreward\MissionReward.class
+dev\manolo\missionreward\challenge\chs\CraftItemChallenge$1.class
 dev\manolo\missionreward\challenge\Challenge.class
-dev\manolo\missionreward\challenge\chs\ZombieChallenge.class
+dev\manolo\missionreward\challenge\chs\CraftItemChallenge.class
 dev\manolo\missionreward\commands\MissionCommand.class
 dev\manolo\missionreward\model\MissionManager.class
 dev\manolo\missionreward\challenge\chs\DirtChallenge.class
